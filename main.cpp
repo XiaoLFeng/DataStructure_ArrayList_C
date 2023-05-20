@@ -1,5 +1,7 @@
 /*
- *
+ * 代码说明
+ * 代码由 筱锋xiao_lfeng 编写
+ * 其开发者由
  */
 
 #include <cstdio>
@@ -41,7 +43,7 @@ void PutSeqList(ArrayList &L, int n) {
 
 // 线性表的长度
 int LengthList(ArrayList L) {
-    return L.length + 1;
+    return L.length;
 }
 
 // 用来找到数值为index元素的位置，返回插入位置的逻辑序号（逻辑序号从1开始）
@@ -98,6 +100,10 @@ int main() {
     // 表长
     printf("[INFO] 表长为：%d\n", LengthList(list));
     OutputSeqList(list);
+
+    // 返回第5个下标位置
+    int info_data = 5;
+    printf("[INFO] 返回下标第 %d 个下标的数据：%d\n",info_data, PositionList(list,info_data));
 
     DestroyList(list);
     system("pause");
